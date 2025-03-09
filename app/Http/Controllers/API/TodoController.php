@@ -22,7 +22,7 @@ class TodoController extends Controller
     {
         $request->validate(['title' => 'required|string|max:255']);
         $todo = Todo::create([
-            'title => $request->title',
+            'title' => $request->title,
             'completed' => false,
         ]);
         return response()->json($todo, 201);
